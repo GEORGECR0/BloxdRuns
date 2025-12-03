@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+}
+
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  animation: fadeOut 1.5s ease forwards;
+  animation-delay: 1.5s;
+  z-index: 9999;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  width: 70px;
+  background: rgba(10, 10, 10, 1);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  gap: 15px;
+  border-radius: 15px;
+  margin: 5px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.28);
+}
+
+.logo {
+  margin: 7px;
+  font-size: 2.5rem;
+  font-family: "Nabla", system-ui;
+}
+
+.nav-btn {
+  padding: 10px;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.4);
+  transition: 0.3s;
+  font-weight: bold;
+  text-align: center ;
+  font-size: 1.7rem;
+  transition: all 0.3s ease-out;
+  border-radius: 12px;
+}
+.nav-btn.active {
+    background: linear-gradient(135deg, #9f0102, #ff6d01);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 15px 0px rgba(159, 1, 2 , 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}       
+.nav-btn:hover:not(.active) {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.content {
+  flex: 1;
+  padding: 50px;
+  background: radial-gradient(circle at top, #1a1a1a 0%, #0c0c0c 80%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  margin: 5px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 0 40px rgba(255, 255, 255, 0.03);
+  color: white;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  position: relative;
+}
+
+.auth-buttons {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.auth-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  font-family: "Rubik", sans-serif;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #9f0102, #ff6d01);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 15px 0px rgba(159, 1, 2, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signup-btn:hover {
+  box-shadow: 0px 0px 20px 0px rgba(159, 1, 2, 0.5);
+}
+
+.welcome-box {
+  text-align: center;
+  max-width: 650px;
+  width: 100%;
+  padding: 50px;
+  background: linear-gradient(135deg, #9f0102, #ff6d01);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(255, 100, 20, 0.35);
+  backdrop-filter: blur(3px);
+}
+
+.welcome-box h1 {
+      font-family: "Rubik", sans-serif;
+  font-size: 2.8rem;
+  margin: 0 0 25px 0;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.welcome-box p {
+      font-family: "Rubik", sans-serif;
+  font-size: 1.15rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.continue-btn {
+  padding: 12px 40px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  font-family: "Rubik", sans-serif;
+  margin-top: 30px;
+}
+
+.continue-btn:hover {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.main-menu {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-btn {
+  padding: 20px 50px;
+  background: linear-gradient(135deg, #9f0102, #ff6d01);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  font-family: "Rubik", sans-serif;
+  box-shadow: 0px 0px 20px 0px rgba(159, 1, 2, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-btn:hover {
+  box-shadow: 0px 0px 30px 0px rgba(159, 1, 2, 0.5);
+  transform: translateY(-3px);
+}
